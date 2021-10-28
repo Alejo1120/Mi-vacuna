@@ -1,0 +1,333 @@
+:root{
+    --morado-ligth: #4E36E9;
+    --morado-dark: #3521B5;
+    --letra-color: #000000;
+    --fondo-color: #ffffff;
+    --tipletra : 'Reem Kufi', sans-serif;
+    --iniciasesion : 'Rokkitt', serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+.body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.log{
+    display: flex;
+}
+#cardizqui{
+    height:100vh;
+    width: 50%;
+    background-color: var(--fondo-color);
+}
+
+.iconhuella{
+    height: 1vh;
+    width: 1vh;
+    float: inline-start;
+    margin-left: 5vh;
+}
+#imagehuella{
+    height: 40px;
+    margin: 3px;
+} 
+.title{
+    margin-left: 5vh;
+    margin-top: 7vh;
+    font-family: var(--tipletra);
+    color: var(--letra-color);
+    font-size: 100;
+}
+.line{
+    height: 0.3vh;
+    width: 47vh;
+    background-color: var(--morado-dark);
+    margin-left: 5vh;
+
+}
+.formulario{
+    margin:5vh;
+    margin-right: 10vh;
+}
+.form-label{
+    color: var(--letra-color);
+    font-family: var(--tipletra);
+    color: var(--letra-color);
+}
+
+#exampleInputEmail1{
+ border-radius: 25px;
+ border-color: var(--morado-ligth);
+ font-family: var(--tipletra);
+}
+
+#exampleInputPassword1{
+    border-radius: 25px;
+    border-color: var(--morado-ligth);
+    font-family: var(--tipletra);
+}
+.form-text{
+    font-family: var(--tipletra);
+}
+#exampleCheck1{
+    background-color: var(--morado-dark);
+}
+#cajacheck p a {
+    float: right;
+    color: var(--morado-dark);
+    font-family: var(--tipletra);
+}
+#cajacheck p a:hover{
+    color: gold;  
+}
+
+.form-check-label{
+    font-family: var(--tipletra);
+}
+
+#btn-login{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: auto;
+    padding: 10px 80px;
+    background-color: var(--morado-ligth);
+    font-family: var(--tipletra);
+    border: var(--morado-ligth);
+    box-shadow: 2px 2px 4px var(--morado-dark);
+    
+}
+
+.recover_password a {
+    color: var(--morado-ligth);
+    font-weight: bold;
+    
+}
+
+.ir{
+    margin: 5vh;
+    font-family: var(--tipletra);
+}
+.ir a {
+    margin: 1vh;
+    color: var(--morado-dark);
+    
+}
+.ir a:hover{
+    color: gold;
+}
+
+/* #cardcolor{
+    height:100vh;
+    width: 50%;
+    background-color: var(--letra-color);
+} */
+#cardere{
+    height:100vh;
+    width: 50%;
+    background-color: var(--morado-ligth);
+    float: left;
+    padding: 0;
+}
+
+.container-lg{
+    padding: 0;
+}
+
+#colordarkpurple-arriba{
+    display: block;
+    padding: 0;
+}
+
+.contai{
+    height: 47px;
+    width: 301px;
+    background-color: var(--morado-dark);
+}
+.contai1{
+    height: 53px;
+    width: 201px;
+    background-color: var(--morado-dark);
+    
+}
+.contai2{
+    height: 33px;
+    width: 101px;
+    background-color: var(--morado-dark);
+}
+/* .colordarkpurple-abajo{
+    display: flex;
+}
+
+.contai3{
+    height: 75px;
+    width: 401px;
+    background-color: var(--morado-dark);
+    float:right;
+    margin-top: 288px;
+}
+.contai4{
+    height: 75px;
+    width: 401px;
+    background-color: var(--morado-dark);
+    float:right;   
+}
+.contai5{
+    height: 75px;
+    width: 401px;
+    background-color: var(--morado-dark);
+    float:right;   
+} */
+
+
+
+.titleinitsection{
+    justify-content: center;
+    display: flex;
+}
+.titleinitsection h1{
+    color: var(--fondo-color);
+    font-family: var(--iniciasesion);
+    margin-bottom: 20px;
+    font-size: 60px;
+
+}
+
+#imgcenter{
+    justify-content: center;
+    display: flex;
+}
+#image-logo{
+    height: 250px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 4px 4px var(--morado-dark);
+}
+#textod{
+    font-family: var(--iniciasesion);
+    margin-top: 20px;
+    font-size: 20px;
+    color: var(--fondo-color);
+}
+
+/* 
+    MEDIA QUERYS
+*/
+
+
+@media screen and  (max-width: 737px) {
+    #cajacheck a {
+        color: cyan;
+        
+    }
+
+    .recover_password {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and  (max-width: 625px) {
+
+
+    .body{
+        width:100%;
+        height: 100vh;
+        margin: 0 px;
+        padding: 0px ;
+        
+    }
+
+    .log{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        background: var(--morado-ligth);
+
+    }
+
+    .iconhuella{
+        /* ocultar  */
+        display: none;
+        margin: 0px auto;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 40px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .line {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    
+   #cardizqui {
+       width: 90%;
+       height: auto;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       border-radius: 15px;
+   }
+
+   .formulario {
+       width: 90%;
+       height: auto;
+       margin: 0px;
+   }
+
+   .container-lg{
+       background-color: darkgreen;
+   }
+
+   .recover_password a {
+    color: var(--morado-ligth);
+    font-weight: bold;
+    
+}
+
+   #cardere{
+       display: none;
+       overflow: hidden;
+   }
+
+   .ir {
+       display: flex;
+        padding: 0px;
+        background-color: transparent;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        width: 100%;
+      
+   }
+
+   .ir p {
+       background-color: none;
+       padding: 0px;
+   }
+   .ir a {
+
+    
+     background-color:none;
+    }
+}
+
