@@ -2,17 +2,39 @@ import './login.css';
 import huella from '../../assets/images/huella-white.png'
 import logo from '../../assets/images/img-logo.jpg'
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import axios from 'axios';
 
 
-const IngresarHandle = () => {
-    fetch()
-}
 
-const Loginscreen = () => {
+const Loginscreen = (props) => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const  handleChange = (e) => {
+        if(e.target.name === 'email'){
+            setEmail(e.target.value)
+        }else {
+            setPassword(e.target.value)
+        }
+    }
+
+    const Login = async () =>  {
+        if(email.length > 0 && password.length >  0){
+            const data = {
+                'email': email,
+                'password': password
+            }
+           const response = await  axios.post('http://127.0.0.1:8000/api/user-login/', data);
+           console.log(response)
+        }else {
+            alert('campos vacios')
+        }
+    }
     return (
 
         <div className="body">
-            <div className="log"> 
+            <div className="log">
                 <div className="container-lg container" id="cardizqui">
                     <div className="iconhuella">
                         <img src={huella} alt="icon-huella" id="imagehuella" />
@@ -27,11 +49,11 @@ const Loginscreen = () => {
                         <div className="mb-3">
                             <label for="exampleInputEmail1" className="form-label">Email </label>
                             <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                                placeholder="mail@web.site.com" />
+                                placeholder="mail@web.site.com" name="email" onChange={handleChange} />
                         </div>
                         <div className="mb-3">
                             <label for="exampleInputPassword1" className="form-label">Password</label>
-                            <input type="password" className="form-control" id="exampleInputPassword1" placeholder="********" />
+                            <input type="password" className="form-control" id="exampleInputPassword1" name="password" placeholder="********" onChange={handleChange}  />
                         </div>
 
                         <div className="recover_password">
@@ -45,7 +67,7 @@ const Loginscreen = () => {
                             <Link to="www.google.co" ></Link>
                         </div>
 
-                        <button type="button" className="btn btn-primary" id="btn-login"  onClick={IngresarHandle} >Login</button>
+                        <button type="button" className="btn btn-primary" id="btn-login" onClick={Login}  >Login</button>
                     </form>
 
 
