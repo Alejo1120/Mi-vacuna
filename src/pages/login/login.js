@@ -6,6 +6,9 @@ import { useState } from 'react';
 import axios from 'axios';
 
 
+import Input from '../components/input/input'
+
+
 
 const Loginscreen = (props) => {
     const [email, setEmail] = useState('');
@@ -14,8 +17,12 @@ const Loginscreen = (props) => {
     const  handleChange = (e) => {
         if(e.target.name === 'email'){
             setEmail(e.target.value)
-        }else {
+            console.log(e.target.value)
+        }else if(e.target.name === 'password'){
             setPassword(e.target.value)
+            console.log(e.target.value)
+        }else {
+            console.log(e.target.value)
         }
     }
 
@@ -56,6 +63,7 @@ const Loginscreen = (props) => {
                             <input type="password" className="form-control" id="exampleInputPassword1" name="password" placeholder="********" onChange={handleChange}  />
                         </div>
 
+                        <Input placeholder={'login'} type={'password'} name={'contrasena'} onChange={handleChange} />
                         <div className="recover_password">
 
 
@@ -64,7 +72,9 @@ const Loginscreen = (props) => {
                                 <label className="form-check-label" for="exampleCheck1">Recordarme</label>
 
                             </div>
-                            <Link to="www.google.co" ></Link>
+                            <Link to="/register" >
+                                Crear cuenta
+                            </Link>
                         </div>
 
                         <button type="button" className="btn btn-primary" id="btn-login" onClick={Login}  >Login</button>
@@ -86,6 +96,7 @@ const Loginscreen = (props) => {
 
                         <div className="contai1"></div>
                         <div className="contai2"></div>
+                        
                         <div className="titleinitsection">
                             <h1>Inicia sesion</h1>
                         </div>
@@ -103,6 +114,7 @@ const Loginscreen = (props) => {
                 </div>
             </div>
         </div>
+
 
     );
 }
